@@ -34,3 +34,19 @@
   transition: 0.2s all;
   box-shadow: 0 0 10px black;
 }
+
+.input__submit:hover {
+  background-color: #388ae2;
+}
+
+.input__submit:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}
+
+.todos {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  flex-wrap: wrap;
+}
