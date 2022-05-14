@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import { ITodo } from "../model";
+import SingleTodo from "./SingleTodo";
 
 interface Porps {
   todos: ITodo[];
@@ -11,7 +12,12 @@ const TodoList: React.FC<Porps> = ({ todos, setTodos }: Porps) => {
   return (
     <div className="todos">
       {todos.map((todo) => (
-        <li key={todo.id}>{todo.todo}</li>
+        <SingleTodo
+          todo={todo}
+          key={todo.id}
+          todos={todos}
+          setTodos={setTodos}
+        />
       ))}
     </div>
   );
